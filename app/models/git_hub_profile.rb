@@ -1,4 +1,4 @@
-class GitHubUser
+class GitHubProfile
   attr_reader :name, :screen_name, :bio, :location, :url, :image
 
   def initialize(raw_profile)

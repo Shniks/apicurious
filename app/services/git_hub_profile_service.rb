@@ -1,10 +1,10 @@
-class GitHubUserService
+class GitHubProfileService
   def initialize(token)
     @token = token
   end
 
   def profile
-    GitHubUser.new(raw_profile)
+    GitHubProfile.new(raw_profile)
   end
 
 private
