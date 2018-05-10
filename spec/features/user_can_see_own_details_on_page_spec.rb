@@ -10,7 +10,7 @@ describe 'User can see own information' do
 
     expect(current_path).to eq('/')
 
-    click_on 'Profiles'
+    click_on 'Profile'
 
     username = 'Shniks'
     expect(current_path).to eq("/#{username}")
