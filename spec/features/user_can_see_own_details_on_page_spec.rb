@@ -3,7 +3,6 @@ require './spec/support/omniauth.rb'
 
 describe 'User can see own information' do
   scenario 'Can see account information' do
-    # When I visit '/'
     visit '/'
 
     click_on "Sign in with GitHub"
@@ -22,6 +21,5 @@ describe 'User can see own information' do
     expect(page).to have_content('Followers')
     expect(page).to have_content('Following')
     expect(page).to have_xpath
-    # I can see my profile pic, starred repos, followers and following
   end
 end
