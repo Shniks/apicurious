@@ -11,6 +11,7 @@ describe 'When I visit the root' do
       click_link "Sign in with GitHub"
 
       expect(current_path).to eq("/")
+      expect(page).to have_css('.welcome_profile')
       expect(page).to have_content('Nikhil')
       expect(page).to have_link('Logout')
     end
