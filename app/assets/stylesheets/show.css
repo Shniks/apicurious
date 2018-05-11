@@ -96,7 +96,8 @@ div.hr-line {
 
 .repos, .followers, .following {
   font-family: Helvetica;
-  margin-right: 16px;
+  font-size: 14px;
+  margin-right: 25px;
   color: grey;
 }
 
