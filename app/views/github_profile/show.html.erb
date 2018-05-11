@@ -5,7 +5,7 @@
 <p><%= @github_profile.location %></p>
 <p><%= @github_profile.url %></p>
 <p>Repositories <%= @github_profile.number_repos %></p>
-<p>Followers<%= @github_profile.followers %></p>
+<p>Followers <%= @github_profile.followers %></p>
 <p>Following <%= @github_profile.following %></p>
 <p><% @github_repos.each do |repo| %></p>
   <li><%= link_to repo[:name], repo[:url] %></li>
