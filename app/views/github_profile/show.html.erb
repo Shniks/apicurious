@@ -15,16 +15,22 @@
       <p class = 'followers'>Followers: <%= @github_profile.followers %></p>
       <p class = 'following'>Following: <%= @github_profile.following %></p>
     </section>
+    <h2 class = 'repos-gists-title'>Latest 6 Repositories</h2>
     <section class = 'middle'>
-      <p><% @github_repos.each do |repo| %></p>
-        <li><%= link_to repo[:name], repo[:url] %></li>
-        <li><%= repo[:language] %></li>
-      <% end %>
+          <p><% @github_repos.each do |repo| %></p>
+          <section class = 'card'>
+            <p><%= link_to repo[:name], repo[:url], :class => "card-link" %></p>
+            <p class = 'card-description'><%= repo[:language] %></p>
+          </section>
+          <% end %>
     </section>
+    <h2 class = 'repos-gists-title'>6 Private Gists</h2>
     <section class = 'bottom'>
       <p><% @github_gists.each do |gist| %></p>
-        <li><%= link_to gist[:description], gist[:url] %></li>
-        <li><%= gist[:created_at] %></li>
+      <section class = 'card'>
+        <p><%= link_to gist[:description], gist[:url], :class => "card-link" %></p>
+        <p class = 'card-description'><%= gist[:created_at] %></p>
+      </section>
       <% end %>
     </section>
   </section>
