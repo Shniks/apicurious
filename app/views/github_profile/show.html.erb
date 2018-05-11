@@ -1,17 +1,37 @@
-<%= image_tag @github_profile.image %>
-<p><%= @github_profile.name %></p>
-<p><%= @github_profile.screen_name %></p>
-<p><%= @github_profile.bio %></p>
-<p><%= @github_profile.location %></p>
-<p><%= @github_profile.url %></p>
-<p>Repositories <%= @github_profile.number_repos %></p>
-<p>Followers <%= @github_profile.followers %></p>
-<p>Following <%= @github_profile.following %></p>
-<p><% @github_repos.each do |repo| %></p>
-  <li><%= link_to repo[:name], repo[:url] %></li>
-  <li><%= repo[:language] %></li>
-<% end %>
-<p><% @github_gists.each do |gist| %></p>
-  <li><%= link_to gist[:description], gist[:url] %></li>
-  <li><%= gist[:created_at] %></li>
-<% end %>
+<%= stylesheet_link_tag "show" %>
+<section class = 'main'>
+  <section class = 'main-left'>
+    <%= image_tag @github_profile.image, :class => "profile-image" %>
+    <p class = 'name'><%= @github_profile.name %></p>
+    <p class = 'screen_name'><%= @github_profile.screen_name %></p>
+    <p class = 'bio'><%= @github_profile.bio %></p>
+    <div class="hr-line"></div>
+    <p class = 'location'><%= @github_profile.location %></p>
+    <p><%= link_to 'LinkedIn Profile', @github_profile.url %></p>
+  </section>
+  <section class = 'main-right'>
+    <section class = 'top'>
+      <p class = 'repos'>Repositories: <%= @github_profile.number_repos %></p>
+      <p class = 'followers'>Followers: <%= @github_profile.followers %></p>
+      <p class = 'following'>Following: <%= @github_profile.following %></p>
+    </section>
+    <h2 class = 'repos-gists-title'>Latest 6 Repositories</h2>
+    <section class = 'middle'>
+          <p><% @github_repos.each do |repo| %></p>
+          <section class = 'card'>
+            <p><%= link_to repo[:name], repo[:url], :class => "card-link" %></p>
+            <p class = 'card-description'><%= repo[:language] %></p>
+          </section>
+          <% end %>
+    </section>
+    <h2 class = 'repos-gists-title'>6 Private Gists</h2>
+    <section class = 'bottom'>
+      <p><% @github_gists.each do |gist| %></p>
+      <section class = 'card'>
+        <p><%= link_to gist[:description], gist[:url], :class => "card-link" %></p>
+        <p class = 'card-description'><%= gist[:created_at] %></p>
+      </section>
+      <% end %>
+    </section>
+  </section>
+</section>

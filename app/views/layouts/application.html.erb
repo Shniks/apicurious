@@ -2,19 +2,27 @@
 <html>
   <head>
     <title>Apicurious</title>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag 'reset', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
   </head>
 
   <body>
-    <% if current_user %>
-      Welcome, <%= current_user.name %>
-      <%= link_to 'Logout', logout_path, method: :delete %>
-    <% else %>
-      <%= link_to 'Sign in with GitHub', github_login_path %>
-    <% end %>
+    <div class="navbar">
+      <a><%= image_tag 'github.png', :class => "main-logo"%></a>
+      <% if current_user  %>
+        <section class="admin">
+          <%= image_tag 'mini_pic.jpeg', :class => "admin-logo" %>
+          <%= link_to 'Logout', logout_path, method: :delete, :class => "admin-logo-text" %>
+        </section>
+      <% else %>
+        <section class="admin">
+          <%= image_tag 'person-1.png', :class => "admin-logo" %>
+          <%= link_to 'Sign in with GitHub', github_login_path, :class => "admin-logo-text" %>
+        </section>
+      <% end %>
+    </div>
     <%= yield %>
   </body>
 </html>

@@ -1,3 +1,9 @@
-<% if current_user %>
-  <%= link_to 'Profile', "/#{current_user.screen_name}" %>
+<%= stylesheet_link_tag "show" %>
+<% if current_user  %>
+  <h3 class="login-main-title">Welcome, <%= current_user.name %><br></h3>
+  <%= link_to image_tag("profile.jpeg", height: 100, width: 300), "/#{current_user.screen_name}" %>
+<% else %>
+  <div class="welcome-page">
+    <p>Welcome to Apicurious</p>
+  </div>
 <% end %>

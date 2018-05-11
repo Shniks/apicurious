@@ -1,0 +1,141 @@
+.welcome-page p {
+  margin-top: 350px;
+  font-size: 80px;
+  font-weight: bold;
+  color: white;
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+  background-color: #666666;
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-shadow: rgba(255,255,255,0.5) 0px 3px 3px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-main-title {
+  margin-left: 15px;
+  margin-top: 60px;
+  margin-bottom: 10px;
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+  font-size: 40px;
+  color: #363636;
+  text-transform: uppercase;
+  text-rendering: optimizeLegibility;
+}
+
+.main {
+  display: flex;
+  justify-content: space-around;
+}
+
+.main-left {
+  margin-bottom: 10px;
+  margin-left: -30px;
+  width: 15%;
+}
+
+.profile-image {
+  height: 250px;
+  width: 250px;
+  margin-top: 20px;
+}
+
+.name {
+  font-family: Helvetica;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.screen_name {
+  font-family: Helvetica;
+  font-size: 18px;
+  font-weight: lighter;
+  margin-top: 5px;
+  color: grey;
+}
+
+.bio {
+  font-family: Helvetica;
+  font-size: 14px;
+  font-weight: lighter;
+  margin-top: 15px;
+  color: grey;
+}
+
+div.hr-line {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    border-bottom: 1px solid #e2e3e4;
+}
+
+.location {
+  font-family: Helvetica;
+  font-size: 14px;
+  margin-top: 20px;
+  color: #4b4b4d;
+}
+
+.main-right {
+  margin-top: 20px;
+  width: 65%;
+}
+
+.top {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e2e3e4;
+}
+
+.repos, .followers, .following {
+  font-family: Helvetica;
+  font-size: 14px;
+  margin-right: 25px;
+  color: grey;
+}
+
+.middle, .bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.repos-gists-title{
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-family: Helvetica;
+  font-size: 16px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  height: 50px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  padding: 10px;
+  border: 1px solid #e2e3e4;
+}
+
+.card-link {
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+  color: #2767cf;
+}
+
+.card-description {
+  font-family: Helvetica;
+  font-size: 12px;
+  margin-top: 20px;
+  color: #4b4b4d;
+}
