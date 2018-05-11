@@ -21,3 +21,4 @@
 # Ignore application configuration
 /config/application.yml
 /spec/support/omniauth.rb
+/spec/fixtures/cassettes

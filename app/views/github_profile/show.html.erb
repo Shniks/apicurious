@@ -1,7 +1,17 @@
-
 <%= image_tag @github_profile.image %>
-<%= @github_profile.name %>
-<%= @github_profile.screen_name %>
-<%= @github_profile.bio %>
-<%= @github_profile.location %>
-<%= @github_profile.url %>
+<p><%= @github_profile.name %></p>
+<p><%= @github_profile.screen_name %></p>
+<p><%= @github_profile.bio %></p>
+<p><%= @github_profile.location %></p>
+<p><%= @github_profile.url %></p>
+<p>Repositories <%= @github_profile.number_repos %></p>
+<p>Followers <%= @github_profile.followers %></p>
+<p>Following <%= @github_profile.following %></p>
+<p><% @github_repos.each do |repo| %></p>
+  <li><%= link_to repo[:name], repo[:url] %></li>
+  <li><%= repo[:language] %></li>
+<% end %>
+<p><% @github_gists.each do |gist| %></p>
+  <li><%= link_to gist[:description], gist[:url] %></li>
+  <li><%= gist[:created_at] %></li>
+<% end %>
