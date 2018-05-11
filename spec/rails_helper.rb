@@ -6,8 +6,8 @@ require File.expand_path('../../config/environment', __FILE__)
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require 'rspec/rails'
 require 'support/factory_bot'
-require 'webmock/rspec'
 require 'vcr'
+require 'webmock/rspec'
 
 VCR.configure do |config|
   config.cassette_library_dir = "spec/fixtures/cassettes"
