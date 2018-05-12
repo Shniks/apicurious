@@ -3,12 +3,12 @@ require './app/models/git_hub_profile'
 describe GitHubProfile do
   let (:attributes) {
     {
-      image: 'http://www.someimage.com/image.png',
+      avatar_url: 'http://www.someimage.com/image.png',
       name: 'Nikhil',
-      screen_name: 'Shniks',
+      login: 'Shniks',
       bio: 'Chills out all day',
       location: 'Whole Foods',
-      url: 'http://www.someblogpost.com'
+      blog: 'http://www.someblogpost.com'
     }
   }
 
