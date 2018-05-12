@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  validates_presence_of :name, :uid, :screen_name, :oauth_token
+  
   def self.from_omniauth(auth_info)
     if find_by(uid: auth_info[:uid])
       find_by(uid: auth_info[:uid]).update(oauth_token: auth_info[:credentials][:token])
